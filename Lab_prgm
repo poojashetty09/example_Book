@@ -1,0 +1,38 @@
+Schema SQL
+1 create table Book(Book_id integer primary key, title varchar(30), publisher_name varchar(20), pub_year integer);
+2 insert into Book values(01,'DAA','Kiran',2019);
+3 insert into Book values(02,'OS','Sapna',2009);
+4 insert into Book values(03,'DBMS','Sam',2007);
+5 insert into Book values(04,'MES','Riya',2000);
+6 insert into Book values(05,'ATC','John',2020);
+
+Query SQL
+1 select * from Book where Book_id=03;
+
+Results
+**Schema (MySQL v5.7)**
+
+    create table Book(Book_id integer primary key, title varchar(30), publisher_name varchar(20), pub_year integer);
+    insert into Book values(01,'DAA','Kiran',2019);
+    insert into Book values(02,'OS','Sapna',2009);
+    insert into Book values(03,'DBMS','Sam',2007);
+    insert into Book values(04,'MES','Riya',2000);
+    insert into Book values(05,'ATC','John',2020);
+
+---
+
+**Query #1**
+
+    select * from Book where Book_id=03;
+
+| Book_id | title | publisher_name | pub_year |
+| ------- | ----- | -------------- | -------- |
+| 3       | DBMS  | Sam            | 2007     |
+
+---
+
+[View on DB Fiddle](https://www.db-fiddle.com/f/kGE782fsYn7WhL5qYQ87kV/2)
+Copy as Markdown
+Query #1 Execution time: 0ms
+Book_id	title	publisher_name	pub_year
+3	DBMS	Sam
